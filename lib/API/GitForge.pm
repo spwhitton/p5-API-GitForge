@@ -112,7 +112,7 @@ sub forge_access_token {
     $key;
 }
 
-=func remote_forge_info($remote)
+=func remote_forge_info $remote
 
 Look at the URL for git remote C<$remote>, as returned by C<git remote
 get-url>, assume that this remote is a git forge, and return the

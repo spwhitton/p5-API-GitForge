@@ -34,6 +34,10 @@ package API::GitForge;
     $github->clean_fork("spwhitton/git-remote-gcrypt");
     $salsa->clean_fork("Debian/devscripts");
 
+=head1 STATUS
+
+Unstable.  Interface may change.
+
 =head1 DESCRIPTION
 
 A I<git forge> is a site like GitHub, GitLab etc.  This module

@@ -16,6 +16,10 @@ package API::GitForge::Role::GitForge;
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+=head1 STATUS
+
+Unstable.  Interface may change.
+
 =head1 DESCRIPTION
 
 Operations which one might wish to perform against any git forge.  See

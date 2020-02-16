@@ -75,4 +75,6 @@ sub main {
 
 sub exit { $exit_main = shift // 0; goto EXIT_MAIN }
 
+=for Pod::Coverage exit
+
 1;

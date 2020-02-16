@@ -115,7 +115,11 @@ sub clean_fork {
     close $fh;
     $git->add("README.md");
     $git->commit({ message => "Temporary fork for pull request(s)" });
-    $git->RUN("push", $fork_uri, "master:gitforge");
+
+    # TODO why does Git::Wrapper hang after pushing the branch to
+    # GitLab?  for now, just use system() to do the push ourselves
+    system "git", "-C", $git->dir, "push", $fork_uri, "master:gitforge";
+
     $self->_clean_config_fork(@_);
 
     # assume that if we had to create the gitforge branch, we just

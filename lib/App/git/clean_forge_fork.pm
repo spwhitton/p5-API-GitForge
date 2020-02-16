@@ -1,7 +1,7 @@
 package App::git::clean_forge_fork;
 # ABSTRACT: create tidy forks for pull requests
 #
-# Copyright (C) 2017, 2020  Sean Whitton <spwhitton@spwhitton.name>
+# Copyright (C) 2020  Sean Whitton <spwhitton@spwhitton.name>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

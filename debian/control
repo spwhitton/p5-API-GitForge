@@ -1,0 +1,45 @@
+Source: libapi-gitforge-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Sean Whitton <spwhitton@spwhitton.name>,
+Section: perl
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 12),
+Build-Depends-Indep:
+ libgit-wrapper-perl,
+ libgitlab-api-v4-perl,
+ libnet-github-perl,
+ librole-tiny-perl,
+ libterm-ui-perl,
+ libtry-tiny-perl,
+ libdist-zilla-perl,
+ libdist-zilla-plugin-git-perl,
+ libdist-zilla-plugin-podweaver-perl,
+ perl (>= 5.28.0),
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libapi-gitforge-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libapi-gitforge-perl.git
+Homepage: https://metacpan.org/release/API-GitForge
+
+Package: libapi-gitforge-perl
+Architecture: all
+Depends:
+ libgit-wrapper-perl,
+ libgitlab-api-v4-perl,
+ libnet-github-perl,
+ librole-tiny-perl,
+ libterm-ui-perl,
+ libtry-tiny-perl,
+ perl (>= 5.28.0),
+ ${misc:Depends},
+ ${perl:Depends},
+Description: generic interface to APIs of sites like GitHub, GitLab etc.
+ A git forge is a site like GitHub, GitLab etc. API::GitForge provides
+ access to some operations which one might wish to perform against any
+ git forge, wrapping the details of the APIs of particular forges. An
+ example of such an operation is forking a repository into the user's
+ own namespace.
+ .
+ See the manpage for API::GitForge::Role::GitForge for details of all
+ the currently supported operations.

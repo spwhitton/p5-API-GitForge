@@ -1,0 +1,3 @@
+version=4
+https://git.spwhitton.name/p5-API-GitForge \
+    /snapshot/p5-API-GitForge-([\d\.]+)\.tar\.gz debian uupdate

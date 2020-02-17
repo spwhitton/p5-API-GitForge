@@ -6,6 +6,9 @@ Section: perl
 Priority: optional
 Build-Depends:
  debhelper-compat (= 12),
+ dh-dist-zilla,
+ libdist-zilla-plugin-git-perl,
+ libdist-zilla-plugin-podweaver-perl,
 Build-Depends-Indep:
  libgit-wrapper-perl,
  libgitlab-api-v4-perl,
@@ -13,9 +16,6 @@ Build-Depends-Indep:
  librole-tiny-perl,
  libterm-ui-perl,
  libtry-tiny-perl,
- libdist-zilla-perl,
- libdist-zilla-plugin-git-perl,
- libdist-zilla-plugin-podweaver-perl,
  perl (>= 5.28.0),
 Standards-Version: 4.5.0
 Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libapi-gitforge-perl

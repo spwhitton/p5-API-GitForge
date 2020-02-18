@@ -126,6 +126,10 @@ sub clean_fork {
 
     $self->_clean_config_fork(@_);
 
+    # TODO use API to unprotect all branches in the fork.  we still
+    # want to use git-push(1) to delete the branches, rather than
+    # using the API for that, because that's maximally compatible
+
     # assume that if we had to create the gitforge branch, we just
     # created the fork, so can go ahead and nuke all branches there.
     # may fail if some branches are protected; that's okay.

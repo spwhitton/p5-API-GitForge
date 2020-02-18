@@ -70,12 +70,11 @@ sub _ensure_fork {
 
 sub _assert_fork_has_parent {
     my ($self, $upstream) = @_;
-    my (undef, $repo)     = _extract_project_id($upstream);
+    my ($path, $repo)     = _extract_project_id($upstream);
     my $user = $self->{_api}->current_user->{username};
     my $fork = $self->{_api}->project("$user/$repo");
 
-    $upstream =~ s/\.git$//;
-    $fork->{forked_from_project}{path_with_namespace} eq $upstream
+    $fork->{forked_from_project}{path_with_namespace} eq $path . "/" . $repo
       or croak
       "$user/$repo does not have parent $upstream; don't know what to do";
 }

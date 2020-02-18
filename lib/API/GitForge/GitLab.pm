@@ -101,11 +101,14 @@ sub _clean_config_fork {
     $self->{_api}->edit_project(
         "$user/$repo",
         {
-            default_branch => "gitforge",
-            description    => "Temporary fork for merge request(s)",
+            default_branch      => "gitforge",
+            description         => "Temporary fork for merge request(s)",
+            issues_access_level => "disabled",
+            # merge requests have to be enabled in the fork in order
+            # to submit merge requests to the upstream repo from which
+            # we forked, it seems
+            merge_requests_access_level => "enabled",
         });
-
-    $self->_clean_config_repo("$user/$repo");
 }
 
 sub _ensure_repo {

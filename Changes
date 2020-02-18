@@ -2,8 +2,9 @@ Revision history for API::GitForge
 
 {{$NEXT}}
     - Add git repo metadata to dist.ini.
-    - Don't disable merge requests in GitLab clean forks, otherwise we
-      can't submit merge requests upstream.
+    - Don't disable merge requests in GitLab clean forks.
+      Otherwise we can't submit merge requests upstream.
+    - Code cleanup.
 
 0.001     2020-02-16 16:20:35-07:00 America/Phoenix
     - First public release.

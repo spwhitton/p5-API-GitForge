@@ -111,6 +111,7 @@ sub _clean_config_fork {
 }
 
 sub _ensure_repo {
+    # TODO
     die "unimplemented";
 }
 

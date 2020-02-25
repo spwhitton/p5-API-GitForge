@@ -21,6 +21,7 @@ Standards-Version: 4.5.0
 Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libapi-gitforge-perl
 Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libapi-gitforge-perl.git
 Homepage: https://metacpan.org/release/API-GitForge
+Testsuite: autopkgtest-pkg-perl
 
 Package: libapi-gitforge-perl
 Architecture: all

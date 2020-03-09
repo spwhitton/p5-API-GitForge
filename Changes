@@ -1,6 +1,8 @@
 Revision history for API::GitForge
 
 {{$NEXT}}
+
+0.002     2020-03-09 12:17:47-07:00 America/Phoenix
     - Implement API::GitForge::GitLab::_ensure_repo().
     - Add git repo metadata to dist.ini.
     - Don't disable merge requests in GitLab clean forks.

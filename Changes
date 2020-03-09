@@ -1,6 +1,8 @@
 Revision history for API::GitForge
 
 {{$NEXT}}
+    - API::GitForge::GitLab::_ensure_repo(): avoid an unnecessary API
+      call.
 
 0.002     2020-03-09 12:17:47-07:00 America/Phoenix
     - Implement API::GitForge::GitLab::_ensure_repo().

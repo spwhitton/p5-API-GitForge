@@ -113,13 +113,9 @@ sub _clean_config_fork {
 sub _ensure_repo {
     my ($self, $target) = @_;
     my ($ns,   $repo)   = _extract_project_id($target);
-
-    # first we are required to get the namespace id
+    return if $self->{_api}->project($target);
     my $namespace = $self->{_api}->namespace($ns)
       or croak "invalid project namespace $ns";
-
-    # now create the project unless it already exists
-    return if $self->{_api}->project($target);
     $self->{_api}
       ->create_project({ name => $repo, namespace_id => $namespace->{id} });
 }

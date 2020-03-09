@@ -1,4 +1,4 @@
-libapi-gitforge-perl (0.002-1) UNRELEASED; urgency=medium
+libapi-gitforge-perl (0.002-1) experimental; urgency=medium
 
   [ Sean Whitton ]
   * New upstream release.
@@ -8,7 +8,7 @@ libapi-gitforge-perl (0.002-1) UNRELEASED; urgency=medium
   * Add debian/tests/pkg-perl/use-name.
   * Enable pkg-perl autopkgtests.
 
- -- Sean Whitton <spwhitton@spwhitton.name>  Mon, 09 Mar 2020 12:18:32 -0700
+ -- Sean Whitton <spwhitton@spwhitton.name>  Mon, 09 Mar 2020 12:22:38 -0700
 
 libapi-gitforge-perl (0.001-1) experimental; urgency=medium
 

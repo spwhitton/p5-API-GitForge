@@ -1,6 +1,7 @@
 Revision history for API::GitForge
 
 {{$NEXT}}
+    - Implement API::GitForge::GitLab::_ensure_repo().
     - Add git repo metadata to dist.ini.
     - Don't disable merge requests in GitLab clean forks.
       Otherwise we can't submit merge requests upstream.

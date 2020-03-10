@@ -69,7 +69,7 @@ sub main {
         exit unless $term->ask_yn(prompt => "Are you sure?");
     }
 
-    my ($forge_domain, $upstream_repo) = remote_forge_info $upstream ;
+    my ($forge_domain, $upstream_repo) = remote_forge_info $upstream;
     my $forge = new_from_domain
       domain       => $forge_domain,
       access_token => forge_access_token $forge_domain;

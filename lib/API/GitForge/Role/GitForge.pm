@@ -109,9 +109,8 @@ sub clean_fork {
     my $temp = tempdir CLEANUP => 1;
     my $git = Git::Wrapper->new($temp);
     $git->init;
-    $git->remote(qw(add fork), $fork_uri);
     my @fork_branches
-      = map { m#refs/heads/#; $' } $git->ls_remote(qw(--heads fork));
+      = map { m#refs/heads/#; $' } $git->ls_remote("--heads", $fork_uri);
     return $fork_uri if grep /\Agitforge\z/, @fork_branches;
 
     open my $fh, ">", catfile $temp, "README.md";

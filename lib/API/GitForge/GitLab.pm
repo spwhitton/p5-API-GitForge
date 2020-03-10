@@ -128,6 +128,14 @@ sub _nuke_fork {
     $self->{_api}->delete_project("$user/$repo");
 }
 
+sub _ensure_fork_branch_unprotected {
+    my ($self, $upstream, $branch) = @_;
+    my (undef, $repo) = _extract_project_id($upstream);
+    my $user = $self->{_api}->current_user->{username};
+    return unless $self->{_api}->protected_branch("$user/$repo", $branch);
+    $self->{_api}->unprotect_branch("$user/$repo", $branch);
+}
+
 sub _extract_project_id {
     my $project = shift;
     $project =~ s#(?:\.git)?/?$##;

@@ -3,6 +3,9 @@ Revision history for API::GitForge
 {{$NEXT}}
     - API::GitForge::GitLab::_ensure_repo(): avoid an unnecessary API
       call.
+    - API::GitForge::Role::GitForge::clean_repo(): try to unprotect
+      fork branches before deleting them, if GitForge API library
+      supports doing this.
 
 0.002     2020-03-09 12:17:47-07:00 America/Phoenix
     - Implement API::GitForge::GitLab::_ensure_repo().

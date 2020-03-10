@@ -1,8 +1,8 @@
-libapi-gitforge-perl (0.003-1) UNRELEASED; urgency=medium
+libapi-gitforge-perl (0.003-1) experimental; urgency=medium
 
   * New upstream release.
 
- -- Sean Whitton <spwhitton@spwhitton.name>  Tue, 10 Mar 2020 09:21:59 -0700
+ -- Sean Whitton <spwhitton@spwhitton.name>  Tue, 10 Mar 2020 09:27:15 -0700
 
 libapi-gitforge-perl (0.002-1) experimental; urgency=medium
 

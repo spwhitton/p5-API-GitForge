@@ -26,7 +26,7 @@ Operations which one might wish to perform against any git forge.  See
 L<API::GitForge>.
 
 In this documentation, C<example.com> should be replaced with the
-domain at which your GitForge is hosted, e.g. C<salsa.debian.org>.
+domain at which your git forge is hosted, e.g. C<salsa.debian.org>.
 
 =cut
 

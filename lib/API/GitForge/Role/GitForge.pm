@@ -104,7 +104,7 @@ fork suitable for adding as a git remote.
 
 sub clean_fork {
     my $self     = shift;
-    my $fork_uri = $self->_ensure_fork(@_);
+    my $fork_uri = $self->_ensure_fork($_[0]);
 
     my $temp = tempdir CLEANUP => 1;
     my $git = Git::Wrapper->new($temp);
@@ -124,7 +124,7 @@ sub clean_fork {
     # GitLab?  for now, just use system() to do the push ourselves
     system "git", "-C", $git->dir, "push", $fork_uri, "master:gitforge";
 
-    $self->_clean_config_fork(@_);
+    $self->_clean_config_fork($_[0]);
 
     # TODO use API to unprotect all branches in the fork.  we still
     # want to use git-push(1) to delete the branches, rather than

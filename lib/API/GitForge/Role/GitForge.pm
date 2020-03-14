@@ -119,7 +119,15 @@ sub clean_fork {
     $git->add("README.md");
     $git->commit({ message => "Temporary fork for pull request(s)" });
 
-    $git->push($fork_uri, "master:gitforge");
+    # We should be able to just say
+    #
+    #     $git->push($fork_uri, "master:gitforge");
+    #
+    # but that hangs indefinitely when pushing to (at least) Debian's
+    # GitLab instance.  So just bypass Git::Wrapper and do the push
+    # ourselves for now
+    system qw(git -C), $git->dir, "push", $fork_uri, "master:gitforge";
+
     $self->_clean_config_fork($_[0]);
 
     # assume that if we had to create the gitforge branch, we just

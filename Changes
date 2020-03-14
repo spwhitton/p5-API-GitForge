@@ -1,6 +1,8 @@
 Revision history for API::GitForge
 
 {{$NEXT}}
+
+0.004     2020-03-13 17:28:05-07:00 America/Phoenix
     - API::GitForge::Role::GitForge::clean_repo(): reinstate
       workaround -- bypass Git::Wrapper when pushing the gitforge
       branch.

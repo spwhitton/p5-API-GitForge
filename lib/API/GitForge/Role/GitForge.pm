@@ -126,7 +126,8 @@ sub clean_fork {
     # but that hangs indefinitely when pushing to (at least) Debian's
     # GitLab instance.  So just bypass Git::Wrapper and do the push
     # ourselves for now
-    system qw(git -C), $git->dir, "push", $fork_uri, "master:gitforge";
+    system qw(git -C), $git->dir, "push", $fork_uri, "master:gitforge"
+      or croak "failed to push the gitforge branch to $fork_uri";
 
     $self->_clean_config_fork($_[0]);
 

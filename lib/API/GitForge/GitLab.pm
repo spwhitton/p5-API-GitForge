@@ -80,12 +80,11 @@ sub _assert_fork_has_parent {
 }
 
 sub _clean_config_repo {
-    my ($self, $upstream) = @_;
-    my (undef, $repo)     = _extract_project_id($upstream);
-    my $user = $self->{_api}->current_user->{username};
+    my ($self, $target) = @_;
+    my ($ns,   $repo)   = _extract_project_id($target);
 
     $self->{_api}->edit_project(
-        "$user/$repo",
+        "$ns/$repo",
         {
             issues_access_level         => "disabled",
             merge_requests_access_level => "disabled",

@@ -1,6 +1,8 @@
 Revision history for API::GitForge
 
 {{$NEXT}}
+
+0.007     2022-01-02 15:59:09-07:00 America/Phoenix
     - README: include an entry for API::GitForge::Role::GitForge near the top,
       as that API is probably the one someone wants to look at first.
 
